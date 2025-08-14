@@ -12,5 +12,13 @@
         "19":"icons/logo19.png",
         "16":"icons/logo16.png"
     }
-  }
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/role_points_calc.js"],
+      "matches": [
+        "https://*.hltv.org/fantasy/*"
+      ]
+    }
+  ]
 }
