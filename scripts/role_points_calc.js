@@ -13,6 +13,15 @@
 
 // log_team_name();
 
+async function get_val(name){
+    return new Promise(async function (res, rej) {
+      chrome.storage.local.get([name], async function (result) {
+          var userLocal = result[name];
+          res(userLocal);
+      });
+    });
+}
+
 function add_expected_value(value) {
     const old_value_divs = document.querySelectorAll(".expected_value")
     old_value_divs.forEach(div => {
@@ -92,4 +101,11 @@ function addClickListenerWhenReady() {
     }
 }
 
-addClickListenerWhenReady();
+(async () => {
+    if (await get_val("role_exp_val")) {
+        console.log("doing role exp value")
+        addClickListenerWhenReady();
+    } else {
+        console.log("not doing role exp value")
+    }
+})();

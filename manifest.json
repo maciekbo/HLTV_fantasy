@@ -20,5 +20,8 @@
         "https://*.hltv.org/fantasy/*"
       ]
     }
+  ],
+  "permissions": [
+    "storage"
   ]
 }
