@@ -1,7 +1,7 @@
 {
-  "name": "HLTV Fantasy Extension",
-  "description": "More data for your Fantasy game",
-  "version": "0.1.0",
+  "name": "HLTV Extension",
+  "description": "Customization and more stuff for HLTV",
+  "version": "0.1.1",
   "manifest_version": 3,
   "action": {
     "default_popup": "intro_popup.html",
